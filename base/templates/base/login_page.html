@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="login_in">
+      <div class="form-wrapper">
+        <div class="form-container">
+          <form method="POST" action="">
+            {% csrf_token %}
+            <label for="username">Student Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Student Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+          </form>
+          <p><h6><a href="{% url 'lecturer_login' %}">Login as Lecturer</a></h6></p>
+          {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+          {% endif %}
+        </div>
+      </div>
+</div>
+
+<style>
+body{
+  background-image: url("{% static 'images/hall.webp' %}");
+  background-size: cover;
+  
+}
+</style>
+
+
+{% endblock %}
+

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generatePage</title>
+</head>
+
+<body class="generate">
+    <div class="container">
+        <a href="{% url 'lecturer_home' %}" class="back-link">Back</a>
+        <div class="content">
+            <p>Your verification code: <h1 class="verification-code">{{ code }}</h1></p>
+            <p>Please students should enter this code during login to verify.</p>
+        </div>
+    </div>
+
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body.generate {
+            background-image: url("{% static 'images/COS.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            color: rgb(1, 1, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #1c8803;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.462);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .verification-code {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.647);
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+    </style>
+</body>
+</html>

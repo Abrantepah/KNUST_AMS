@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verification Code</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{% static 'images/KNUST.jpg' %}"); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px); /* Adjust the blur amount as needed */
+            z-index: -1; /* Place the background image behind other content */
+        }
+
+        .container {
+            position: relative; /* Make sure the container is positioned relative */
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for the container */
+            z-index: 1; /* Place the container above the background image */
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button[type="submit"] {
+            margin-top: 8px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Enter Verification Code</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="code" placeholder="Enter code" required>
+            <button type="submit">Verify</button>
+        </form>
+        {% if error_message %}
+        <p>{{ error_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

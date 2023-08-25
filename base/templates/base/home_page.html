@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<div class="main">
+<div class="container"> 
+  <div class="logo">
+    <img src="{% static 'images/t_kwame-nkrumah-university-of-science-and-technology7703.jpg' %}" alt="">
+  </div>
+
+  <div class="Welcome"> 
+    <h1><strong> Welcome Back, <span>{{student.name}}</span> </strong></h1>
+    <p>Remember, <span> <strong id="span">THREE OR MORE</strong>  </span> unauthorized absences disqualify you from taking the course exams</p>
+  </div>
+  
+  <form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" >Attendance</button>
+  </form>
+  
+</div>
+
+</div>
+{% endblock %}
+    

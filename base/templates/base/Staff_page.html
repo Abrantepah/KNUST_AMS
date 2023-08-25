@@ -1,0 +1,101 @@
+{% extends 'main2.html' %}
+{% block content %}  
+{% load static %}
+<div class="main">
+<div class="container"> 
+  <div class="logo">
+    <img src="{% static 'images/t_kwame-nkrumah-university-of-science-and-technology7703.jpg' %}" alt="">
+  </div>
+
+  <div class="Welcome"> 
+    <h1><strong> Welcome Back, <span>{{lecturer.name}}</span> </strong></h1>
+    <p>Remember, It Is <span> <strong id="span" >Important</strong> </span> To Take Attendance</p>
+  </div>
+  
+  <div class="course">
+    
+    <form method="POST">
+      {% csrf_token %}
+      <div class="all_select"></div>
+      <label for="course">Course</label>
+      <select required name="course" id="course">
+        {% for course in courses %}
+        <option value="{{course.id}}">{{course.name}}</option>
+        {% endfor %}
+      </select>
+      <label for="session">Session</label>
+      
+      <select required name="session" id="session">
+        <!-- Options for sessions will be populated by JavaScript -->
+        {%for session in available_sessions%}
+        <option value="{{session.id}}"> {{session.id}}</option>
+        {% endfor %}
+      </select>
+      
+      </div>
+      <div class="Buttton">
+       <button type="submit" id="generateButton">Generate</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+
+
+<script>
+    // Function to fetch and populate sessions based on the selected course
+    function populateSessions(selectedCourseId) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', `/get_sessions_for_course/?course_id=${selectedCourseId}`, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var sessionDropdown = document.getElementById('session');
+
+                    // Clear existing options
+                    sessionDropdown.innerHTML = '';
+
+                    // Add new options for sessions
+                    for (var sessionId of data.available_sessions) {
+                        var option = document.createElement('option');
+                        option.value = sessionId;
+                        option.textContent = 'Session ' + (((sessionId-1)%15) + 1);
+                        sessionDropdown.appendChild(option);
+                    }
+                } else {
+                    // Handle error
+                    console.error('Failed to fetch sessions for the selected course.');
+                }
+            }
+        };
+        xhr.send();
+    }
+
+    // Add event listener to the course dropdown
+    document.getElementById('course').addEventListener('change', function() {
+        var selectedCourseId = this.value;
+        populateSessions(selectedCourseId);
+    });
+
+    // Add event listener to the "Generate" button for submitting the generate request
+    document.getElementById('generateButton').addEventListener('click', function(event) {
+        var selectedCourseId = document.getElementById('course').value;
+        var selectedSessionId = document.getElementById('session').value;
+        
+        // You can use these selected values to generate the verification code
+        // and perform any additional logic if needed.
+        
+        // For example, you can redirect to the verification code page with the selected values.
+        window.location.href = 'generate/{{code}}';
+    });
+
+    // Load sessions for the default selected course on page load
+    var defaultCourseId = document.getElementById('course').value;
+    populateSessions(defaultCourseId);
+</script>
+{% endblock %}
+
+
+

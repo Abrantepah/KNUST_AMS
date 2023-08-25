@@ -1,0 +1,63 @@
+
+<div class="sform">
+    <form method="POST" action="">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="Submit">
+    </form>
+ </div>
+
+ <style>
+    .sform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  }
+
+form {
+  width: 500px; /* Adjust the width as needed */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+ </style>

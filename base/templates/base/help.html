@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<body>
+  <div class="container">
+    <h1 id="h1">Chat Page</h1>
+    <div class="chat-container">
+      <div class="chat-messages">
+        <div class="message">
+          <div class="message-sender">Bot</div>
+          <div class="message-content">Please, What do you need assistance with?</div>
+        </div>
+      </div>
+      <div class="faq-container">
+        <h2>FAQs</h2>
+        <ul class="faq-list">
+          <li class="faq-item" onclick="generateAnswer(1)">How do I change my password?</li>
+          <li class="faq-item" onclick="generateAnswer(2)">How do I seek for permission?</li>
+          <li class="faq-item" onclick="generateAnswer(3)">Strike limit for exam disqualification?</li>
+          <li class="faq-text" onclick=""><input type="text" name="" id="" placeholder="Ask Your Questions Here"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
