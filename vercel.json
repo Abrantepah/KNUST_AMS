@@ -15,9 +15,5 @@
         "src": "/static/(.*)",
         "dest": "static/$1"
       }
-    ],
-
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "ams.settings"
-    }
+    ]
 }
