@@ -140,8 +140,8 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static' / 'admin'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 
