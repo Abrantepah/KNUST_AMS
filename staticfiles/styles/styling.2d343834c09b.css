@@ -1,0 +1,533 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome,
+.button {
+  text-align: center;
+}
+
+.background-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-image img {
+  max-width: 100%;
+}
+
+.main button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main button:hover {
+  background-color: darkgreen;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#strike {
+  border-radius: 4px;
+  background-color: green;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: none;
+}
+
+span {
+  color: green;
+}
+
+#span{
+  color: red;
+}
+
+.attendance-taker {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attendance-taker h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="date"] {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#mark-attendance {
+  margin-left: 10px;
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#attendance-result {
+  font-size: 18px;
+  color: #333;
+}
+
+.home-navbar .college {
+  background-color: rgb(46, 206, 46);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.attendance-taker img {
+  width: 20%;
+  height: auto;
+  border-radius: 2px;
+  border: 2px solid black;
+}
+
+.attendance-taker h3 {
+  color: rgb(6, 144, 45);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.attendance-marker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.marker {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 10px;
+}
+
+.time {
+  font-size: 16px;
+}
+
+.timer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timer h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.timer #timer {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+#mark-attendance.clicked {
+  background-color: #006400;
+}
+
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as desired */
+  backdrop-filter: blur(2px); /* Adds a blur effect to the background */
+}
+
+.form-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.211); /* Adjust the opacity as desired */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  transition: 0.3s;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form input:hover {
+  border: 2px solid  #80bdff;
+  transition: 0.1s;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  padding: 5px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 5px #80bdff;
+}
+
+.form-container input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+
+#logo img{
+ width: 50px;
+ height: auto;
+}
+
+.logo {
+  margin-top: 80px;
+  margin-bottom: -40px;
+}
+
+
+  .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+
+  select {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+  }
+
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .button-container button {
+    padding: 7px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+
+
+  .container-fluid {
+    display: flex;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+  }
+  
+  .collapsed {
+    margin-left: -200px;
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+    transition: margin-left 0.5s;
+  }
+  
+  .sidebar.collapsed + .content {
+    margin-left: 60px;
+  }
+  
+
+  .sidebar a {
+    display: block;
+    color: #fff;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  
+  .sidebar a.active {
+    background-color: #4CAF50;
+  }
+  
+  .toggle-button {
+    position: fixed;
+    top: 24px;
+    left: 150px;
+    padding: 8px;
+    background-color: #f3f3f3;
+    border: 2px solid rgb(7, 197, 48);
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.5s;
+  }
+  
+  
+  .sidebar.collapsed + .toggle-button {
+    transition: margin-left 0.5s;
+  }
+  
+  .toggle-button:hover {
+    background-color: #d8f1d4;
+  }
+  
+  
+
+/* Filter section styles */
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-container select,
+.filter-container input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.filter-container button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background-color: #037e03;
+  transition: 0.3s;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accept-button,
+.decline-button {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.accept-button {
+  background-color: rgb(93, 214, 93);
+  color: darkgreen;
+}
+
+.decline-button {
+  background-color: lightcoral;
+  color: darkred;
+}
+
+.hide {
+  display: none;
+}
+
+.Adeeper {
+  background-color: #08960d;
+  color: #f8f4f4;
+}
+
+.Ddeeper {
+  background-color: #b90606;
+  color: #fdfcfc;
+}
+
+
+
+.view-file-button {
+  background-color: #474747; /* Green background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  text-align: center; /* Center align text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline block */
+  font-size: 16px; /* Set font size */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.view-file-button:disabled {
+  background-color: #999999; /* Gray background color for disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+
+/* Help */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#h1 {
+  text-align: center;
+}
+
+.chat-container {
+  display: flex;
+}
+
+.chat-messages {
+  flex: 1;
+  background-color: #80c270;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 5px;
+}
+
+
+.message {
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+.message-sender {
+  font-weight: bold;
+  color: #f7542b;
+}
+
+.faq-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.faq-item:hover {
+  text-decoration: underline;
+}
