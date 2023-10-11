@@ -1,35 +1,20 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "ams/wsgi.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "manage.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "collectstatic.py",  
-      "use": "@vercel/python"
-    }   
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "static/$1"
-    },
-    {
-      "src": "/media/(.*)",
-      "dest": "media/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "ams/wsgi.py"
-    }
-  ],
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "ams.settings"
-  },
-  "functions": { "build": { "runtime": "vercel-python@0.25" } }
+    "builds": [
+      {
+        "src": "ams/wsgi.py",
+        "use": "@vercel/python"
+      } 
+    ],
+    
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "ams/wsgi.py"
+      },
+
+      {
+        "src": "/static/(.*)",
+        "dest": "static/$1"
+      }
+    ]
 }
