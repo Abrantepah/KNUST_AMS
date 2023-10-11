@@ -91,11 +91,11 @@ WSGI_APPLICATION = 'ams.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',   # Replace with your database name
+        'NAME': 'postgres',   # Replace with your database name
         'USER': 'postgres',    # Replace with your username
-        'PASSWORD': 'AATi6H4FxFy7Ti1lVmj4',  # Replace with your password
-        'HOST': 'containers-us-west-42.railway.app',   # Leave empty for localhost
-        'PORT': '7117',   # Leave empty for the default port
+        'PASSWORD': 'Frowne77',  # Replace with your password
+        'HOST': '',   # Leave empty for localhost
+        'PORT': '5432',   # Leave empty for the default port
     }
 }
 
